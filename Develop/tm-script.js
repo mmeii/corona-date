@@ -19,5 +19,5 @@ function eventSearch(state) {
 
 $(document).on("click", ".searchBtn", function() {
     var searchState = $(".stateSearched").text();
-    currentCondition(searchState);
+    eventSearch(searchState);
 });
