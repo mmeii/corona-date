@@ -17,7 +17,8 @@ function eventSearch(state) {
     });
 }
 
-$(document).on("click", ".searchBtn", function() {
-    var searchState = $(".stateSearched").text();
-    currentCondition(searchState);
+$("#searchBtn").on("click", function() {
+    var searchState = $("#stateSearched").val();
+    eventSearch(searchState);
+    console.log(searchState);
 });

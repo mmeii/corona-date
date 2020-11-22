@@ -1,0 +1,15 @@
+h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: black;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+/* .hero-body {
+    background: url(Assets/Images/hero-img-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+} */
