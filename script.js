@@ -1,32 +1,7 @@
-//fetch('https://api.covidtracking.com');
-//localStorage.fetch();
 
+let requestURL = 'https://api.covidtracking.com/v1/us/current.json';
+let request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
 
-var createCORSRequest = function(method, url) {
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr) {
-      // Most browsers.
-      xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined") {
-      // IE8 & IE9
-      xhr = new XDomainRequest();
-      xhr.open(method, url);
-    } else {
-      // CORS not supported.
-      xhr = null;
-    }
-    return xhr;
-  };
-  
-  var url = 'https://api.covidtracking.com';
-  var method = 'GET';
-  var xhr = createCORSRequest(method, url);
-  
-  xhr.onload = function() {
-    // Success code goes here.
-  };
-  
-  xhr.onerror = function() {
-    // Error code goes here.
-  };
-  
