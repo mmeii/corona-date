@@ -30,4 +30,3 @@ var createCORSRequest = function(method, url) {
     // Error code goes here.
   };
   
-  xhr.send();
