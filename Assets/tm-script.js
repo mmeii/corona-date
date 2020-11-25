@@ -13,6 +13,34 @@ function eventSearch(state) {
         method: "GET"
     }).then(function(tmResponse) {
         console.log(tmResponse);
+        // event name - 3 events
+        // date
+        // image
+        // link to event
+        for (let i = 0; i < 3; i++) {
+            var eventInfo = {
+            name: tmResponse._embedded.events[i].name,
+            date: tmResponse._embedded.events[i].dates.start.localDate,
+            imageUrl: tmResponse._embedded.events[i].images[0].url,
+            link: tmResponse._embedded.events[i].url
+            };
+
+            var eventImg = `<img src="${eventInfo.imageUrl}" style="width:640px;height:360px;" alt="${eventInfo.name}" />`;
+            var eventLink = `<a href="${eventInfo.link}">Link to Event</a>`;
+
+            var eventCard = $(`
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <p class="title">${eventInfo.name}</p>
+                <p class="subtitle">${eventInfo.date}</p>
+                <p>${eventImg}</p>
+                <p>${eventLink}</p>
+              </article>
+            </div>
+            `);
+
+            $("#mainContent").append(eventCard);
+        }
 
     });
 }
