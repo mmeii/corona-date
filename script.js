@@ -7,18 +7,23 @@ $(document).ready(function(){
         var death = [];
 
 
-        //console.log(data);
-
+        
         $.each(data, function(id,object){
             state.push(object.state);
+            date.push(object.date);
+            positive.push(object.positive);
+            death.push(object.death);
+
+
+            state.shift()
+            
 
 
 
         });
 
-        console.log(state);
-
-
+        //console.log(positive);
+       // console.log(state);
 
 
     });
