@@ -1,30 +1,47 @@
 $(document).ready(function(){
-    //get JSON data from url
+
+
+ //get JSON data from url
     $.getJSON("https://api.covidtracking.com/v1/states/current.json", function(data){
+
         var state = [];
         var date = [];
         var positive = [];
         var death = [];
 
+        
+
+        var total_state;
+        var total_date;
+        var total_positive;
+        var total_death;
+
+        total_state = data.state;
+        total_date = data.date;
+        total_positive = data.positive;
+        total_death = data.death;
+
+
+        $("#state").append(total_state);
+        $("#date").append(total_date);
+        $("#positive").append(total_positive);
+        $("#death").append(total_death);
+
 
         
-        $.each(data, function(id,object){
-            state.push(object.state);
-            date.push(object.date);
-            positive.push(object.positive);
-            death.push(object.death);
-
-
-            state.shift()
-            
-
-
+        $.each(data, function(id,obj){
+            state.push(obj.state);
+            date.push(obj.date);
+            positive.push(obj.positive);
+            death.push(obj.death);
 
         });
 
-        //console.log(positive);
-       // console.log(state);
-
-
+        
+        console.log(state);
     });
 });
+
+
+
+
