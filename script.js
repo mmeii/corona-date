@@ -16,10 +16,10 @@ $(document).ready(function(){
         var total_positive;
         var total_death;
 
-        total_state = data.state;
-        total_date = data.date;
-        total_positive = data.positive;
-        total_death = data.death;
+        total_state = data[0].state;
+        total_date = data[0].date;
+        total_positive = data[0].positive;
+        total_death = data[0].death;
 
 
         $("#state").append(total_state);
