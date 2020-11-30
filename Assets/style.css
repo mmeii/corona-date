@@ -8,8 +8,16 @@ h2 {
     font-size: 30px;
 }
 
-/* .hero-body {
-    background: url(Assets/Images/hero-img-bg.jpg);
+.hero-body {
+    background: url(./Images/coronadatehero.png);
     background-repeat: no-repeat;
     background-size: 100%;
-} */
+}
+
+#searchArea {
+    margin-top: 10em;
+}
+
+#description {
+    color: #555555;
+}
