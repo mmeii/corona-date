@@ -17,9 +17,9 @@ This application has been designed for users who are seeking information about e
 ## Usage
 
 
- ![Image of Weather App](https://github.com/Mindyratcliff/WeatherApp/blob/main/ScreenShot%20Weather%20App.jpeg)
+ ![Image of CoronaDate](https://github.com/mmeii/project-1-corona-date/tree/main/Assets/Images/screenshot.jpeg)
 
- The application may be accessed here [CodeQuiz](https://mindyratcliff.github.io/WeatherApp/)
+ The application may be accessed here [CoronaDate](https://mmeii.github.io/project-1-corona-date/)
 
 ## Installation
 
