@@ -152,6 +152,7 @@ button.addEventListener('click', () => {
     })
     .then((data)=> {
 
+
         var results = document.getElementById('results');
 
         var template = `<h4 class="mt-4">Covid Cases</h4>`
@@ -167,16 +168,12 @@ button.addEventListener('click', () => {
                     
                 </ul>
             `
+        
             
         })
         results.innerHTML = template;
         
     })
 
-})
-
-
-$("#searchBtn").on("click", function() {
-    var searche = $("#stateSearched").val();
-    console.log(searche);
 });
+
