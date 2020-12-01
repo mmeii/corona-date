@@ -136,44 +136,78 @@ async function covid(){
 
 covid();
 
+-------------
 
+
+
+
+const logBtn = document.getElementById('searchBtn');
+logBtn.addEventListener('click', fetchData);
+
+async function fetchData() {
+
+    const response = await fetch('https://api.covidtracking.com/v1/states/current.json');
+    const data = await response.json();
+
+    data.forEach(obj => {
+        Object.entries(obj).forEach(([stateSearched, date]) => {
+            console.log(`${stateSearched} ${date}`);
+        });
+        console.log('-------------------');
+
+
+
+
+        
+    });
+}
 */
-
 
 
 var button = document.getElementById("searchBtn");
 
-button.addEventListener('click', () => {
+button.addEventListener('click', function () {
 
-    fetch('https://api.covidtracking.com/v1/states/current.json')
-    .then((response)=>{
-        return (response.json());
+// get value from input js
+var state = 'oh'
 
-    })
-    .then((data)=> {
+var url = 'https://api.covidtracking.com/v1/states/'+state+'/current.json'
+
+        fetch(url)
+            .then((response) => {
+                return (response.json());
+            })
+            .then((data) => {
+
+                console.log(data);
 
 
-        var results = document.getElementById('results');
+                //for(i=0; i<data.length; i++){ 
 
-        var template = `<h4 class="mt-4">Covid Cases</h4>`
-    
+                var results = document.getElementById('results');
 
-        data.forEach((element) => {
-            template += `
+                var template = `<h4 class="mt-4">Covid Cases</h4>`;
+
+                template += `
                 <ul class="list-group mb-4">
-                    <li class="list-group-item"><strong>State: ${element.state}</strong></li>
-                    <li class="list-group-item"><strong>Date: </strong> ${element.date}</li>
-                    <li class="list-group-item"><strong>Positive Cases: </strong> ${element.positive}</li>
-                    <li class="list-group-item"><strong>Seaths: </strong> ${element.death}</li>
+                    <li class="list-group-item"><strong>State: ${data.state}</strong></li>
+                    <li class="list-group-item"><strong>Date: </strong> ${data.date}</li>
+                    <li class="list-group-item"><strong>Positive Cases: </strong> ${data.positive}</li>
+                    <li class="list-group-item"><strong>Deaths: </strong> ${data.death}</li>
                     
                 </ul>
-            `
-        
+            `;
+                
+
+                console.log(template);
+
+                results.innerHTML = template;
+
+               // }
             
-        })
-        results.innerHTML = template;
+            });
+
+        });
+
+
         
-    })
-
-});
-
