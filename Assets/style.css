@@ -17,8 +17,6 @@ h2 {
 
 #searchDiv,
 #searchArea {
-    /* margin-top: 7rem;
-    margin-left: 10rem; */
     margin-right: auto;
     margin-left: auto;
 }
@@ -54,4 +52,4 @@ h2 {
         background-position: 50% 40%;
         background-repeat: no-repeat;
     }
-  }
+}
