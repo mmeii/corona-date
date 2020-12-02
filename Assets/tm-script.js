@@ -26,7 +26,10 @@ function eventSearch(state) {
             link: tmResponse._embedded.events[i].url
             };
 
-            var eventImg = `<img src="${eventInfo.imageUrl}" style="width:640px;height:360px;" alt="${eventInfo.name}" />`;
+            var eventImg = `
+                <figure class="image is-4by3 mb-2">
+                    <img src="${eventInfo.imageUrl}" alt="${eventInfo.name}" />
+                </figure>`;
             var eventLink = `<a href="${eventInfo.link}">Link to Event</a>`;
 
             
