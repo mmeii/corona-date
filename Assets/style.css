@@ -8,10 +8,11 @@ h2 {
     font-size: 30px;
 }
 
-.hero-body {
+#hero {
     background: url(./Images/coronadatehero.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-color: white;
 }
 
 #searchArea {

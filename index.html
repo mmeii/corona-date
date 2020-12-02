@@ -11,43 +11,42 @@
 </head>
 
 <body>
-    <div class="container mb-6">
-        <!-- project title section -->
-        <section class="hero is-fullheight is-danger is-bold mb-4">
-            <div class="hero-body">
-              <div class="container mt-6 pt-6 mr-6 ml-6 pr-6 pl-6">
-                <div id="searchArea" class="field has-addons mt-7 pt-5 py-5 mr-6 ml-6 pl-6 pr-6">
-                  <div class="control is-expanded">
-                    <input id="stateSearched" class="input is-medium is-danger" type="text" placeholder="Enter state code">
-                  </div>
-                  <div class="control">
-                    <a id="searchBtn" class="button is-medium is-danger">
-                      Search
-                    </a>
-                  </div>
-                
-                </div>
-                <p id="description" class="subtitle mr-6 ml-6 pr-6 pl-6">Find events matched with state Covid-19 data. Be romantic and responsible at the same time.</p>
-              </div>
+  <div class="container mb-6">
+    <!-- project title section -->
+    <section id="hero" class="hero is-fullheight is-danger is-bold mb-4">
+      <div class="hero-body">
+        <div class="container mt-6 pt-6 mr-6 ml-6 pr-6 pl-6">
+          <div id="searchArea" class="field has-addons mt-7 pt-5 py-5 mr-6 ml-6 pl-6 pr-6">
+            <div class="control is-expanded">
+              <input id="stateSearched" class="input is-medium is-danger" type="text" placeholder="Enter state code">
             </div>
-        </section>
-        
-        <div class="container text-center" id="results">
-          <!-- covid data -->
-        </div>
+            <div class="control">
+              <a id="searchBtn" class="button is-medium is-danger">
+                Search
+              </a>
+            </div>
+          </div>
 
-        <!-- main section can be dynamically generated in js-->
-        <div id="mainContent" class="tile is-ancestor mt-4">
-          <!-- events data -->
+          <p id="description" class="subtitle mr-6 ml-6 pr-6 pl-6">Find events matched with state Covid-19 data. Be romantic and responsible at the same time.</p>
+
         </div>
+      </div>
+    </section>
+    
+    <div class="container text-center" id="results">
+      <!-- covid data -->
     </div>
 
-
-    
+    <!-- main section can be dynamically generated in js-->
+    <div id="mainContent" class="tile is-ancestor mt-4">
+      <!-- events data -->
+    </div>
+  </div>
 
     <!-- linking js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="Assets/tm-script.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
