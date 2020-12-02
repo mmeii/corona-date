@@ -26,3 +26,7 @@ h2 {
 .title {
     font-size: 30px;
 }
+
+#results {
+    text-align: center;
+}
