@@ -49,4 +49,4 @@ $("#searchBtn").on("click", function() {
     var searchState = $("#stateSearched").val();
     eventSearch(searchState);
     console.log(searchState);
-}); 
+});
