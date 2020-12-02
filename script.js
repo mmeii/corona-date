@@ -3,7 +3,7 @@ var button = document.getElementById("searchBtn");
 button.addEventListener('click', function () {
 
 // get value from input js
-var state = 'oh'
+var state =  document.getElementById("stateSearched").value;
 
 var url = 'https://api.covidtracking.com/v1/states/'+state+'/current.json'
 
@@ -30,7 +30,7 @@ var url = 'https://api.covidtracking.com/v1/states/'+state+'/current.json'
             `;
                 
 
-                console.log(template);
+                
 
                 results.innerHTML = template;
 
