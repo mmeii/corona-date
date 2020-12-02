@@ -17,6 +17,7 @@ function eventSearch(state) {
         // date
         // image
         // link to event
+        $("#mainContent").empty();
         for (let i = 0; i < 3; i++) {
             var eventInfo = {
             name: tmResponse._embedded.events[i].name,
@@ -27,6 +28,8 @@ function eventSearch(state) {
 
             var eventImg = `<img src="${eventInfo.imageUrl}" style="width:640px;height:360px;" alt="${eventInfo.name}" />`;
             var eventLink = `<a href="${eventInfo.link}">Link to Event</a>`;
+
+            
 
             var eventCard = $(`
             <div class="tile is-parent">
@@ -41,6 +44,7 @@ function eventSearch(state) {
 
             $("#mainContent").append(eventCard);
         }
+        
 
     });
 }
