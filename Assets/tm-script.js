@@ -18,6 +18,13 @@ function eventSearch(state) {
         // image
         // link to event
         $("#mainContent").empty();
+
+        $(".hero").addClass("hero mb-4").removeClass("hero is-fullheight is-danger is-bold mb-4");
+        $("#hero")
+            .css("background-image", "url('Assets/Images/CoronaDate.jpg')")
+            .css("background-size", "auto")
+            .css("background-position", "center");
+
         for (let i = 0; i < 3; i++) {
             var eventInfo = {
             name: tmResponse._embedded.events[i].name,
@@ -26,10 +33,11 @@ function eventSearch(state) {
             link: tmResponse._embedded.events[i].url
             };
 
-            var eventImg = `<img src="${eventInfo.imageUrl}" style="width:640px;height:360px;" alt="${eventInfo.name}" />`;
+            var eventImg = `
+                <figure class="image is-4by3 mb-2">
+                    <img src="${eventInfo.imageUrl}" alt="${eventInfo.name}" />
+                </figure>`;
             var eventLink = `<a href="${eventInfo.link}">Link to Event</a>`;
-
-            
 
             var eventCard = $(`
             <div class="tile is-parent">
