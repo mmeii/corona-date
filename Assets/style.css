@@ -1,3 +1,10 @@
+#hero {
+    background: url(./Images/coronadatehero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
+}
+
 h1 {
     font-size: 60px;
     font-weight: 600;
@@ -8,19 +15,27 @@ h2 {
     font-size: 30px;
 }
 
-#hero {
-    background: url(./Images/coronadatehero.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: white;
-}
-
+#searchDiv,
 #searchArea {
-    margin-top: 10em;
+    /* margin-top: 7rem;
+    margin-left: 10rem; */
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #description {
     color: #555555;
+    width: 68%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#searchDiv {
+    text-align: center;
+}
+
+#searchArea {
+    width: 68%
 }
 
 .title {
@@ -30,3 +45,13 @@ h2 {
 #results {
     text-align: center;
 }
+
+@media (min-width: 320px) and (max-width: 550px) {
+    #hero {
+        background-color: white;
+        background: url(./Images/CoronaDate.jpg);
+        background-size: contain;
+        background-position: 50% 40%;
+        background-repeat: no-repeat;
+    }
+  }

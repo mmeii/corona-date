@@ -23,7 +23,8 @@ function eventSearch(state) {
         $("#hero")
             .css("background-image", "url('Assets/Images/CoronaDate.jpg')")
             .css("background-size", "auto")
-            .css("background-position", "center");
+            .css("background-position", "center")
+            .css("background-color", "white");
 
         for (let i = 0; i < 3; i++) {
             var eventInfo = {
