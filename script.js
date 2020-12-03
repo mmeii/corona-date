@@ -14,6 +14,8 @@ var url = 'https://api.covidtracking.com/v1/states/'+state+'/current.json'
             .then((data) => {
 
                 console.log(data);
+                localStorage.setItem("State", data.state);
+                localStorage.setItem("Date", data.date);
 
                 var results = document.getElementById('results');
 
