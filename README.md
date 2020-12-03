@@ -17,7 +17,7 @@ This application has been designed for users who are seeking information about e
 ## Usage
 
 
- ![CoronaDate](https://github.com/mmeii/project-1-corona-date/blob/final-readme/Assets/Images/screenshot.jpeg)
+ ![CoronaDate](https://github.com/mmeii/project-1-corona-date/blob/final-readme/Assets/Images/screenshot.jpg)
 
  The application may be accessed here [CoronaDate](https://mmeii.github.io/project-1-corona-date/)
 
