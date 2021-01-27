@@ -18,7 +18,7 @@ This application has been designed for users who are seeking information about e
 
 ![CoronaDate](Assets/Images/screenshot.png)
 
- The application may be accessed here [CoronaDate](https://mmeii.github.io/project-1-corona-date/)
+ The application may be accessed here [CoronaDate](https://mmeii.github.io/corona-date/)
 
 ## Installation
 
